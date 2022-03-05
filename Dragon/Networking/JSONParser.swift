@@ -41,18 +41,6 @@ class JSONParser {
             }
             
             if 200...299 ~= response.statusCode {
-//                if let data = data {
-//                    do {
-//                        let jsonDecoder = JSONDecoder()
-//                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-//                        let decodedData:T = try jsonDecoder.decode(T.self, from: data)
-//                        completion(.success(decodedData))
-//                    } catch {
-//                        completion(.failure(DataError.decodingError))
-//                    }
-//                } else {
-//                    completion(.failure(DataError.invalidData))r
-//                }
                 self.decodeJson(data: data, completion: completion)
                 
             } else {

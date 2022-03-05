@@ -9,7 +9,7 @@
 import Foundation
 
 class CurrencyService {
-    private let apiConfig2 = APIConfig2()
+    private let apiConfig2 = APIConfig()
     private let jsonParser = JSONParser()
 
 }

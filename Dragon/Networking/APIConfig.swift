@@ -8,42 +8,52 @@
 
 import Foundation
 
-final class APIConfig2 {
-
-    let host = Environment.baseURL
-    let scheme = "http"
+enum RESTMethod: String {
+    case get = "get"
+    case post = "post"
+}
+protocol Target {
+    var path: String {get}
+}
+enum DragonsTarget: Target {
+    case current
+    case rideDetails(Int)
     
-    var baseURL: URLComponents {
+    var path: String {
+        switch self {
+        case .current:
+            return ""
+        case let .rideDetails(id):
+            return "detail/\(id)/"
+        }
+    }
+    
+    func makeURL() -> URL? {
+        var urlComponents = APIConfig.baseURL
+        urlComponents.path = self.path
+        guard let url = urlComponents.url else {
+            print("Error create url")
+            return nil
+        }
+        return url
+    }
+    
+}
+
+final class APIConfig {
+    
+    static let host = Environment.baseURL
+    static let scheme = "http"
+    
+    static var baseURL: URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
         return urlComponents
     }
-    
-    enum Target: String {
-        case current = ""
-        
-        var path: String {
-                switch self {
-                    case .current:
-                        return ""
-            }
-        }
-    }
-    
-    func makeURL(with target: Target) -> URL? {
-        var urlComponents = baseURL
-        urlComponents.path = target.path
-        guard let url = urlComponents.url else {
-            print("Error create url")
-            return nil
-        }
-        
-        return url
-        
-    }
+}
 
-};extension URLComponents {
+extension URLComponents {
     mutating func setQueryItems<T: LosslessStringConvertible>(with parameters: [String: T]) {
         self.queryItems = parameters.map { URLQueryItem(name: $0.key, value: String($0.value)) }
     }

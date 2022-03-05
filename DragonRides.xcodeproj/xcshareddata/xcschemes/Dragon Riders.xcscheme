@@ -39,6 +39,16 @@
                ReferencedContainer = "container:DragonRides.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "866AECC827D3FA8C0021CCF0"
+               BuildableName = "Dragon RidersTests.xctest"
+               BlueprintName = "Dragon RidersTests"
+               ReferencedContainer = "container:DragonRides.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

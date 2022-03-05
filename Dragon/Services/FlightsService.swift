@@ -13,10 +13,10 @@ protocol FlightsServiceProtocol {
 }
 
 class FlightsService: FlightsServiceProtocol {
-    private let apiConfig2 = APIConfig2()
+    private let dragonsTarget: DragonsTarget = .current
     private let jsonParser = JSONParser()
     func getFlights(completion: @escaping FetchResultCallback<FlightResponse>) {
-        let jsonURL = apiConfig2.makeURL(with: .current)
+        let jsonURL = dragonsTarget.makeURL()
         
         jsonParser.fetchJSON(of: FlightResponse.self, from: jsonURL!) { result in
             completion(result)
