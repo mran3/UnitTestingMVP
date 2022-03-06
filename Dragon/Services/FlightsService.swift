@@ -16,8 +16,7 @@ class FlightsService: FlightsServiceProtocol {
     private let dragonsTarget: DragonsTarget = .current
     private let jsonParser = JSONParser()
     func getFlights(completion: @escaping FetchResultCallback<FlightResponse>) {
-        let jsonURL = dragonsTarget.makeURL()
-        
+        let jsonURL = dragonsTarget.makeURL()        
         jsonParser.fetchJSON(of: FlightResponse.self, from: jsonURL!) { result in
             completion(result)
         }
