@@ -17,7 +17,9 @@ Even in such a magical place, we need an app to helping us find Dragon Rides.
 - Unit Tests.
 
 ## Passing unit tests
-![Screenshot](tests.png)
+<p align="center">
+    <img width="35%" src="tests.png">
+<p>
 
 ## Screenshot of the example app
 ![Screenshot](screenshot.png)
