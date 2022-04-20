@@ -22,6 +22,8 @@ Even in such a magical place, we need an app to helping us find Dragon Rides.
 ## Screenshot of the example app
 ![Screenshot](screenshot.png)
 
-## Author
+## Tutorial
+You can read the related tutorial on: <a href="https://www.turtle-techies.com/adding-unit-tests-to-an-ios-mvp-project-in-swift/">Turtle Techies</a>
 
+## Author
 Andrés Acevedo is an iOS developer from Colombia with more than 10 years of experience developing awesome apps.
