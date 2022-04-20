@@ -18,11 +18,13 @@ Even in such a magical place, we need an app to helping us find Dragon Rides.
 
 ## Passing unit tests
 <p align="center">
-    <img width="35%" src="tests.png">
-<p>
+    <img width="45%" src="tests.png" />
+</p>
 
 ## Screenshot of the example app
-![Screenshot](screenshot.png)
+<p align="center">
+    <img width="30%" src="screenshot.png" />
+</p>
 
 ## Tutorial
 You can read the related tutorial on: <a href="https://www.turtle-techies.com/adding-unit-tests-to-an-ios-mvp-project-in-swift/">Turtle Techies</a>
