@@ -16,8 +16,10 @@ Even in such a magical place, we need an app to helping us find Dragon Rides.
 - Programmatic UI (No storyboards.)
 - Unit Tests.
 
+## Passing unit tests
+![Screenshot](tests.png)
 
-## Screenshot
+## Screenshot of the example app
 ![Screenshot](screenshot.png)
 
 ## Author
